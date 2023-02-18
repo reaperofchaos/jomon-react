@@ -3,15 +3,14 @@ import createSagaMiddleware from 'redux-saga';
 import configuration from './reducers/configuration.reducers';
 import configurationSagas from './sagas/configuration.sagas';
 
-
 const sagaMiddleware = createSagaMiddleware();
-
 
 const store = configureStore({
   reducer: {
-    configuration,
+    configuration
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(sagaMiddleware)
 });
 
 sagaMiddleware.run(configurationSagas);

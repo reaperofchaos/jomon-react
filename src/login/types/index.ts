@@ -1,1 +1,1 @@
-export * from './props.types'
+export * from './props.types';

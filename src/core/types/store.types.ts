@@ -1,3 +1,3 @@
-export interface ConfigurationState{
-    isAuthorized: boolean; 
+export interface ConfigurationState {
+  isAuthorized: boolean;
 }
