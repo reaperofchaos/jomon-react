@@ -83,5 +83,7 @@ export const expert: Expert = {
             "degree": "Anthropology",
             "yearObtained": 1996,
         }
+    ], 
+    publications: [
     ]
 }

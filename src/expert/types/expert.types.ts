@@ -32,10 +32,23 @@ export interface Project {
   end?: number; 
 }
 
+export enum SourceType{
+  ARTICLE = "a",
+  ABSTRACT = "ab",
+  BOOK = "b",
+  RADIO_PRESENTATION = "r",
+  PRESENTATION = "pr",
+  POSTER = "po",
+  THESIS = "t",
+  DISSERTATION = "d",
+  VIDEO = "v",
+  WEBSITE = "w",
+}
+
 export interface Publication {
   id: number;
   authors: string;
-  srcType: string;
+  srcType: SourceType;
   year: number;
   title: string; 
   journal: string;

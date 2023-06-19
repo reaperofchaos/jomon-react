@@ -1,16 +1,22 @@
-import { Box } from '@mui/material'
+import { Avatar, Box } from "@mui/material";
+import { Expert } from "./types";
+import NameComponent from "./Name";
+import Bio from "./Bio";
+import PersonalWebsites from "./PersonalWebsites";
+import Projects from "./Projects";
+import Publications from "./Publications";
+import EducationComponent from "./EducationComponent";
 
-const ExpertComponent = () => (
-<Box>
-    <Avatar/><Name/>
-    <Bio/>
-    <PersonalWebsites/>
-    <CV/>
-    <AssociatedOrganizations/>
-    <Education>
-    <Publications>
-    <Excavations/>
-    <SupervisedStudents/>
-</Box>);
+const ExpertComponent = ({ expert }: { expert: Expert }) => (
+  <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
+    <Avatar />
+    <NameComponent name={expert.name} />
+    <Bio description={expert.description} />
+    <PersonalWebsites websites={expert.personalWebsites} />
+    <Projects projects={expert.projects} />
+    <EducationComponent education={expert.education} />
+    <Publications works={expert.publications} />
+  </Box>
+);
 
 export default ExpertComponent;
