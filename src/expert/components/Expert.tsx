@@ -5,9 +5,9 @@ import PersonalWebsites from "./PersonalWebsites";
 import Projects from "./Projects";
 import Publications from "./Publications";
 import EducationComponent from "./EducationComponent";
-import { Expert } from "../types";
+import { Expert, ExpertWithDetails } from "../types";
 
-const ExpertComponent = ({ expert }: { expert: Expert }) => (
+const ExpertComponent = ({ expert }: { expert: ExpertWithDetails }) => (
   <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
     <Avatar />
     <NameComponent name={expert.name} />

@@ -8,7 +8,7 @@ const Projects = ({ projects }: { projects?: Project[] }) => {
       <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <Typography variant="h6">Projects</Typography>
         {projects.map((project) => (
-          <ProjectItem project={project} />
+          <ProjectItem key={project.id} project={project} />
         ))}
       </Box>
     );

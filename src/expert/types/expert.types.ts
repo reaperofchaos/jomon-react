@@ -84,7 +84,15 @@ export interface Education {
   yearObtained: number; 
 }
 
-export interface Expert {
+export interface Expert{
+  id: number; 
+  firstName: string;
+  middleName?: string;
+  lastName: string;
+  suffix?: string;
+
+}
+export interface ExpertWithDetails {
   id: number;
   name: Name;
   profileImage?: string;

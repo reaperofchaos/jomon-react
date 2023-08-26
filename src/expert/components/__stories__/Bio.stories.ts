@@ -1,4 +1,3 @@
-import ExpertComponent from "../Expert";
 import type { Meta, StoryObj } from "@storybook/react";
 import { expert } from "../../__fixtures__/expert.fixtures";
 import Bio from "../Bio";

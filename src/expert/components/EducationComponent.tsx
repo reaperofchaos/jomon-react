@@ -8,7 +8,7 @@ const EducationComponent = ({ education }: { education?: Education[] }) => {
       <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <Typography variant="h6">Education</Typography>
         {education.map((school) => (
-          <SchoolItem school={school} />
+          <SchoolItem key={school.id} school={school} />
         ))}
       </Box>
     );

@@ -1,24 +1,33 @@
-import React from 'react';
-import {Box, Typography} from '@mui/material'
-import NavigationBar from './components/navigation-bar';
-import { useSelector } from 'react-redux';
-import { selectIsAuthorized } from './selectors/configuration.selectors';
-import AccountLoginForms from '../login/components/account-login-forms';
+import React from "react";
+import { Box, Typography } from "@mui/material";
+// import { useSelector } from "react-redux";
+// import { selectIsAuthorized } from "./selectors/configuration.selectors";
+import AccountLoginForms from "../login/components/account-login-forms";
+import { RouterProvider } from "react-router-dom";
 function App() {
-  const isLoggedIn = useSelector(selectIsAuthorized);
-  if(!isLoggedIn){
+  const isLoggedIn = true;
+  if (!isLoggedIn) {
     return (
-      <Box sx={{display: 'flex', flexDirection: 'column'}}>
-      <Typography variant="h3" sx={{marginBottom: '20px', display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>Not Logged In!</Typography>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Typography
+          variant="h3"
+          sx={{
+            marginBottom: "20px",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+          }}
+        >
+          Not Logged In!
+        </Typography>
         <AccountLoginForms />
       </Box>
-    )
+    );
   }
 
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column'}}>
-      <NavigationBar />
-      <Typography variant="h3" sx={{marginBottom: '20px', display: 'flex', flexDirection: 'row', justifyContent: 'center'}}>Jomon Database</Typography>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
+      {/* <RouterProvider router={router} /> */}
     </Box>
   );
 }

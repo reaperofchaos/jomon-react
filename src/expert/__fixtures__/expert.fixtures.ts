@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
-import {DegreeType, EducationLevel, Expert} from '../types/expert.types'
-export const expert: Expert = {
+import {DegreeType, EducationLevel, Expert, ExpertWithDetails} from '../types/expert.types'
+export const expert: ExpertWithDetails = {
     "id": 1,
     "name": {
         "first": "Junko",

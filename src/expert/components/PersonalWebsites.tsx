@@ -8,7 +8,7 @@ const PersonalWebsites = ({ websites }: { websites?: Website[] }) => {
       <Box sx={{ display: "flex", flexDirection: "column", width: "100%" }}>
         <Typography variant="h6">Personal Websites</Typography>
         {websites.map((website) => (
-          <WebsiteItem website={website} />
+          <WebsiteItem key={website.id} website={website} />
         ))}
       </Box>
     );
