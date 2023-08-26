@@ -18,7 +18,11 @@
        "spellcheck/spell-checker": ["warn", {
             "skipWords": [
               "vh",
-              "vw"
+              "vw",
+              "po",
+              "doi",
+              "ph", 
+              "cv"
             ]
           }
         ]

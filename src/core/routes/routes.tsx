@@ -23,6 +23,10 @@ export const routes = [
             element: <ExpertList />,
           },
           {
+            path: "/Expert/:id",
+            element: <ExpertWrapper />,
+          },
+          {
             path: "/Expert/Add",
             element: <ExpertForm />,
           },

@@ -14,3 +14,9 @@ export const selectAllExperts = createSelector(
 
 export const selectExpertById = (state: RootState, id: number) =>
   state.expert.experts[id];
+
+export const selectExpertDetailById = (state: RootState, id: number) =>
+  state.expert.expertDetails[id];
+
+export const selectExpertDetailsMap = (state: RootState) =>
+  state.expert.expertDetails;

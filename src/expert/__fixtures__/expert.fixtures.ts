@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import {DegreeType, EducationLevel, Expert, ExpertWithDetails} from '../types/expert.types'
 export const expert: ExpertWithDetails = {
-    "id": 1,
+    "id": 2300,
     "name": {
         "first": "Junko",
         "last": "Habu",

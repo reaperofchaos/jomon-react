@@ -1,8 +1,9 @@
-import { DataGrid, GridColDef } from "@mui/x-data-grid";
+import { DataGrid, GridColDef, GridEventListener } from "@mui/x-data-grid";
 import useGetAllExperts from "../hooks/useGetAllExperts";
 import { useSelector } from "react-redux";
 import { selectAllExperts } from "../selectors";
 import { Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const ExpertList = () => {
   useGetAllExperts();
@@ -37,12 +38,19 @@ const ExpertList = () => {
     },
   ];
 
+  const navigate = useNavigate();
 
+  const handleEvent: GridEventListener<"rowClick"> = (
+    params, // GridRowParams
+    event, // MuiEvent<React.MouseEvent<HTMLElement>>
+    details // GridCallbackDetails
+  ) => navigate(`/Expert/${params.row.id}`);
   return (
     <Box sx={{ height: "65vh", width: "100%" }}>
       <DataGrid
         rows={expertList}
         columns={columns}
+        onCellClick={handleEvent}
         density="compact"
         initialState={{
           pagination: {
