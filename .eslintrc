@@ -22,7 +22,8 @@
               "po",
               "doi",
               "ph", 
-              "cv"
+              "cv",
+              "axios"
             ]
           }
         ]

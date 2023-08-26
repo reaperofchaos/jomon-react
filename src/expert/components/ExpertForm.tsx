@@ -2,6 +2,9 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
+import { createExpert } from "../reducers/expert.reducers";
+import { useDispatch } from "react-redux";
+import { buildExpert } from "../helpers";
 
 const ExpertForm = () => {
   const [prefix, setPrefix] = useState<string | undefined>(undefined);
@@ -9,6 +12,7 @@ const ExpertForm = () => {
   const [middleName, setMiddleName] = useState<string | undefined>(undefined);
   const [lastName, setLastName] = useState<string | undefined>(undefined);
   const [suffix, setSuffix] = useState<string | undefined>(undefined);
+  const dispatch = useDispatch();
 
   const clearForm = () => {
     setPrefix(undefined);
@@ -19,6 +23,11 @@ const ExpertForm = () => {
   };
 
   const handleSubmit = () => {
+    const expert = buildExpert(firstName, middleName, lastName, suffix);
+
+    if (expert) {
+      dispatch(createExpert(expert));
+    }
     clearForm();
   };
 

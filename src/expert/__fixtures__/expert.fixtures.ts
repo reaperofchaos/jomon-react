@@ -1,11 +1,10 @@
+/* eslint-disable spellcheck/spell-checker */
 /* eslint-disable prettier/prettier */
-import {DegreeType, EducationLevel, Expert, ExpertWithDetails} from '../types/expert.types'
+import {DegreeType, EducationLevel, ExpertWithDetails} from '../types/expert.types'
 export const expert: ExpertWithDetails = {
     "id": 2300,
-    "name": {
-        "first": "Junko",
-        "last": "Habu",
-    },
+    "firstName": "Junko",
+    "lastName": "Habu",
     "profileImage": "habu.png",
     "description": "Junko Habu is a professor at the Department of Anthropology, University of California, Berkeley. Born in Kawasaki City in Kanagawa Prefecture, she received her BA (1982) and MA (1984) from Keio University and her Ph.D. (1996) from McGill University. Junko has excavated a number of prehistoric Jomon sites and historic Edo period sites in Japan, as well as Thule Inuit sites in the Canadian arctic. Her books include Subsistence-Settlement Systems and Intersite Variability in the Moroiso Phase of the Early Jomon Period of Japan, Ancient Jomon of Japan, Beyond Foraging and Collecting and Evaluating Multiple Narratives. Junko’s research focuses on human-environmental interaction and long-term sustainability of human cultures. (taken from <a href='https://independent.academia.edu/JunkoHabu'>Academia.Edu (accessed 2/18/2023)</a>",
     "personalWebsites": [

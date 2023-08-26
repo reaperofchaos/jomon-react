@@ -41,9 +41,7 @@ const ExpertList = () => {
   const navigate = useNavigate();
 
   const handleEvent: GridEventListener<"rowClick"> = (
-    params, // GridRowParams
-    event, // MuiEvent<React.MouseEvent<HTMLElement>>
-    details // GridCallbackDetails
+    params // GridRowParams
   ) => navigate(`/Expert/${params.row.id}`);
   return (
     <Box sx={{ height: "65vh", width: "100%" }}>

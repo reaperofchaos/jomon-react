@@ -1,8 +1,7 @@
 import { Typography } from "@mui/material";
-import { Name } from "../types";
 
-const NameComponent = ({ name }: { name: Name }) => (
-  <Typography>{`${name.first} ${name.last}`}</Typography>
+const NameComponent = ({ name }: { name: string }) => (
+  <Typography>{name}</Typography>
 );
 
 export default NameComponent;

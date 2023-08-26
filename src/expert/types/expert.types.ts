@@ -88,13 +88,11 @@ export interface Expert{
   id: number; 
   firstName: string;
   middleName?: string;
-  lastName: string;
+  lastName?: string;
   suffix?: string;
 
 }
-export interface ExpertWithDetails {
-  id: number;
-  name: Name;
+export interface ExpertWithDetails extends Expert {
   profileImage?: string;
   description?: string;
   personalWebsites?: Website[];

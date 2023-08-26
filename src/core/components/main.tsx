@@ -9,7 +9,9 @@ const Main = () => {
   return (
     <Box>
       <NavigationBar navigate={navigate} />
-      <Outlet />
+      <Box sx={{ width: "100%", margin: "20px" }}>
+        <Outlet />
+      </Box>
     </Box>
   );
 };

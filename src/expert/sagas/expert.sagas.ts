@@ -5,6 +5,7 @@ import { type AxiosResponse } from "axios";
 import { type AxiosPayload } from "../../utils/types/payload.types";
 import { Expert } from "../types";
 import {
+  addExpert,
   addExpertDetails,
   addExperts,
   createExpert,
@@ -15,7 +16,20 @@ import {
 import { expert } from "../__fixtures__/expert.fixtures";
 
 function* createNewExpert(action: PayloadAction<{ expert: Expert }>) {
-  yield "hello";
+  const expert = action.payload;
+
+  console.log("expert", expert);
+
+  const payload: AxiosPayload = {
+    method: "post",
+    action: getAllExperts.type,
+    url: "http://localhost:8092/author/",
+    data: expert,
+  };
+
+  const response: AxiosResponse<Expert> = yield call(fetch, payload);
+  console.log("response", response);
+  yield put(addExpert(response.data));
 }
 
 function* fetchExperts() {
@@ -43,11 +57,12 @@ function* fetchExpertDetailsFromFixture(action: PayloadAction<number>) {
     yield put(addExpertDetails(expert));
   }
 }
-const conferenceSagas = [
+
+const expertSagas = [
   takeLatest(getAllExperts.type, fetchExperts),
   takeLatest(getExpertById.type, fetchExpertById),
   takeLatest(createExpert.type, createNewExpert),
   takeLatest(getExpertDetailForId.type, fetchExpertDetailsFromFixture),
 ];
 
-export default conferenceSagas;
+export default expertSagas;
