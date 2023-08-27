@@ -9,8 +9,8 @@ const NavigationBar = ({ navigate }: { navigate: NavigateFunction }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const sourceOptions: MenuOptions[] = [
-    { name: "View Sources", route: "/conference/" },
-    { name: "Add Conference", route: "/conference/add/" },
+    { name: "View Sources", route: "/Source/" },
+    { name: "Add Source", route: "/Source/Add/" },
   ];
   const expertOptions: MenuOptions[] = [
     { name: "View Experts", route: "/Expert/" },
