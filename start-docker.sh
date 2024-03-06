@@ -1,0 +1,1 @@
+docker run -it -p 9001:3000 jomon-ui
